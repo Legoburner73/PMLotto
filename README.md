@@ -1,0 +1,2 @@
+# PMLotto
+Lotto for PocketMiners
