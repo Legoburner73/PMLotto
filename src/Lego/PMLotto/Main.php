@@ -18,6 +18,12 @@ class Main extends PluginBase implements Listener {
         $this->samapi = $this->getServer()->getPluginManager()->getPlugin("SAMMY");
     }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
-      
+      switch($command->getName()) {
+        case "lotto":
+          if(isset($args[0])) {
+            
+          }
+        break;
+      }
     }
 }
