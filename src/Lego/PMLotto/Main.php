@@ -20,10 +20,44 @@ class Main extends PluginBase implements Listener {
     public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
       switch($command->getName()) {
         case "lotto":
-          if(isset($args[0])) {
-            
+          if(isset($args[0])) {]
+          switch($args[0]) {
+            case "admin":
+              if(isset($args[1])) {
+                switch($args[1]) {
+                  case "ticket":
+                    if(isset($args[2])) {
+                      $name = $args[2];
+                      $player = $this->getServer()->getPlayer($name);
+                      if($player instanceof Player) {
+                        $this->plugin->addTicket($player);
+                        $sender->sendMessage("Giving Player " . $player . " a ticket");
+                      }else{
+                        $sender->sendMessage("This player is offline.");
+                      }
+                    }else{
+                      $this->plugin->addTicket($sender);
+                      $sender->sendMessage("Giving you a ticket");
+                    }
+                    case ""
+                }
+              }
+            break;
           }
         break;
       }
+    }
+    }
+    public function addTicket($player) {
+      
+    }
+    public function startLotto() {
+      
+    }
+    public function changeWinnings($amount) {
+      
+    }
+    public function playerWin() {
+      
     }
 }
